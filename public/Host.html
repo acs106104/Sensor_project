@@ -1,0 +1,123 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/foundation/5.5.3/css/foundation.min.css">
+	<link rel="stylesheet" href="css/app.css">
+	<script src="https://cdn.staticfile.org/foundation/5.5.3/js/vendor/modernizr.js"></script>
+	
+  </head>
+	<body class="host">
+		<script src="/js/jquery.js"></script>
+		<script src="/js/socket.io-1.7.3.min.js"></script>
+		<div class="container">
+			<div id="create-area">
+				<div class="row">
+					<div class="large-7 medium-7 small-12 columns small-centered">
+						<form id="create-form">
+							<h2 style="color:#1a8cff;">Host</h2>
+							<p id="error-msg"></p> 
+							<input type="text" name="username" placeholder="Enter your name" >
+							<input type="text" name="roomName" placeholder="Enter an event name" >
+							<input type="text" name="userid" placeholder="Create your ID" >
+							<input type="submit" value="Create Room">
+						</form>
+					</div>	
+				</div>
+			</div>
+			   
+			<div class="row" id="message-area">
+				<div class="large-8 columns small-centered">
+					<h2>Host</h2>
+					<div class="chat-wrap" style="height:20%;">
+						<div class="top">
+							<h5 class="room-title"></h5>
+							<h5 class="code-title"></h5>
+							<h5 class="id-title"></h5>
+						</div>
+						<!--芊彤加的nav bar-->
+						<!-- <div class="topnav">
+  							<a class="active" href="#home">Home</a>
+							<a href="#describe">Describe</a>
+  							<a href="#vote">Vote</a>
+  							<a href="#participant">Participant</a>
+						</div> -->
+						<div>
+							<ul class="tabs" data-tab="" style="background-color: rgb(239, 239, 239);">
+								<li class="default tab-title active" style="padding:5px;"><a href="#home" aria-selected="false" tabindex="0">Home</a></li>
+								<li class="tab-title" style="padding:5px;"><a href="#describe" aria-selected="false" tabindex="-1">Describe</a></li>
+								<li class="tab-title" style="padding:5px;"><a href="#vote" aria-selected="true" tabindex="-1">Vote</a></li>
+								<li class="tab-title" style="padding:5px;"><a href="#participant" aria-selected="false" tabindex="-1" onclick="showParticipants()">Participant</a></li>
+							</ul>
+							<div class="tabs-content" style="margin:20px;">
+								<div class="content active" id="home" aria-hidden="false">
+								  <h3>Home</h3>
+								  <p>活動主旨..</p>
+								</div>
+								<div class="content" id="describe" aria-hidden="true" tabindex="-1">
+								  <h3>Describe</h3>
+								  <p>活動描述...</p>
+
+								  <div class="large-6 columns">
+									<div class="row collapse postfix-round">
+									  <div class="small-9 columns">
+										<input type="text" placeholder="Value">
+									  </div>
+									  <div class="small-3 columns">
+										<a href="#" class="button postfix">修改</a>
+									  </div>
+									</div>
+								  </div>
+
+								</div>
+								<div class="content" id="vote" aria-hidden="true" tabindex="-1">
+								  <h3>投票創建</h3>
+								  <p>投票內容...</p>
+								</div>
+								<div class="content" id="participant" aria-hidden="true" tabindex="-1">
+								  <h3>參加者</h3>
+								  <p id="participants">有誰呢？</p>
+								</div>
+							</div>
+						</div>
+
+						<div id="messages">
+						</div>
+					
+						<!--test area
+						<p id="XYZ">hello</p>
+						<p id="differXYZ"></p>
+						<p id="shakeCount">0</p>
+						<!--test area-->
+
+						<form id="message-form">
+							<!-- <div class="input-group">
+								<input type="text" placeholder="Type message here" class="input-group-field" name="message">
+							  <div class="input-group-button">
+							    <input type="submit" value="Send">
+							  </div>
+							 </div> -->
+						</form>
+					</div>	
+				</div>
+			</div>
+			<footer>
+				<p>View on <a href="https://github.com/moniba-ali/socketio-chatroom" target="_blank">GitHub</a></p>
+			</footer>
+		</div>
+		<script src="/js/moment.min.js"></script>
+		<script src="/js/app.js"></script>
+		<script src="https://cdn.staticfile.org/foundation/5.5.3/js/foundation.min.js"></script>
+		<script type="text/javascript">
+			$(document).foundation();
+		</script>
+
+		<!--<script src="shake.js"></script>
+		<script>
+			let s = new Shaking();
+		</script>-->
+	</body>
+</html>
